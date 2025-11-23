@@ -1,1 +1,83 @@
+/* ----------------------------- */
+/* Additional styling you are allowed to add */
+/* ----------------------------- */
 
+/* Header style / navigation bar */
+header {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 28px;
+    color: gold;
+    margin-right: 25px;
+}
+
+/* Article content styling */
+article {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+article h2 {
+    color: #333;
+    border-bottom: 2px solid #999;
+    padding-bottom: 5px;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Button style */
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #2974c2;
+}
+
+/* Aside styling */
+aside {
+    background: #fff8e1;
+    padding: 15px;
+    border-left: 4px solid #ffab00;
+    border-radius: 4px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 12px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}
