@@ -1,0 +1,25 @@
+header a {
+	color:  #FF6565;
+    text-decoration: none;
+}
+header ul {
+	list-style: none;
+    margin-left: auto;   
+    display: flex;
+    list-style: none;
+    gap: 20px; 
+}
+header li {
+	display: inline;
+	vertical-align:middle;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 30px 120px;
+}
+
+.nav-links a {
+  text-decoration: none;
+ 
+}

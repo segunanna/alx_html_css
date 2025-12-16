@@ -6,6 +6,8 @@
     --text-color: #ffffff;
     --text-secondary: #a0a0a0;
     --background-dark: #071629;
+    --background-light: #ffffff;
+    --section-bg: #f8f9fa;
     
     /* Font Variables */
     --font-primary: 'Source Sans Pro', Arial, sans-serif;
@@ -17,12 +19,19 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-xxl: 4rem;
+    --spacing-xxxl: 5rem;
     
     /* Border Radius */
     --border-radius: 2rem;
+    --border-radius-sm: 0.5rem;
     
     /* Transitions */
     --transition-speed: 0.3s;
+    
+    /* Shadows */
+    --shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    --shadow-heavy: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 /* CSS Reset */
@@ -35,6 +44,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 
 body {
@@ -257,11 +267,105 @@ button {
     opacity: 0.9;
 }
 
+/* Main Content */
+.main-content {
+    width: 100%;
+}
+
+/* Section Base Styles */
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* What We Do Section */
+.what-we-do-section {
+    background-color: var(--background-light);
+    color: var(--secondary-color);
+}
+
+.what-we-do-section .section-title,
+.what-we-do-section .section-description {
+    color: var(--secondary-color);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+/* Service Item */
+.service-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    background-color: var(--background-light);
+}
+
+.service-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-heavy);
+}
+
+.service-icon {
+    margin-bottom: var(--spacing-md);
+    font-size: 6rem;
+    color: var(--primary-color);
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.service-description {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
 /* Responsive Design - Tablet */
 @media screen and (max-width: 768px) {
     :root {
         --spacing-xl: 1.5rem;
         --spacing-xxl: 2.5rem;
+        --spacing-xxxl: 3rem;
     }
     
     .hero-title {
@@ -274,6 +378,20 @@ button {
     
     .nav-menu {
         gap: var(--spacing-lg);
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    .service-icon {
+        font-size: 5rem;
+        height: 5rem;
     }
 }
 
@@ -331,6 +449,45 @@ button {
     .hero-content {
         padding: 0 var(--spacing-sm);
     }
+    
+    /* What We Do Section Adjustments */
+    .section-container {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .section-description {
+        font-size: 0.85rem;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .service-item {
+        padding: var(--spacing-md);
+    }
+    
+    .service-icon {
+        font-size: 4rem;
+        height: 4rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .service-title {
+        font-size: 1rem;
+    }
+    
+    .service-description {
+        font-size: 0.8rem;
+    }
 }
 
 /* Additional Mobile Optimization */
@@ -346,5 +503,14 @@ button {
     .cta-button {
         padding: var(--spacing-xs) var(--spacing-md);
         font-size: 0.7rem;
+    }
+    
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .service-icon {
+        font-size: 3.5rem;
+        height: 3.5rem;
     }
 }
